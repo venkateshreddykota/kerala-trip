@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kerala Trip Plan 2025</title>
+  <title>Updated South India Trip – Aug 2025</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <style>
     body {
@@ -79,7 +79,6 @@
       color: white;
     }
 
-    /* Image scroll styles */
     .image-scroll-container {
       overflow: hidden;
       white-space: nowrap;
@@ -93,7 +92,6 @@
       display: inline-block;
       padding-left: 100%;
       animation: scrollImages 30s linear infinite;
-      animation-play-state: running;
     }
 
     .image-scroll-track img {
@@ -106,14 +104,12 @@
       vertical-align: middle;
     }
 
-    /* Pause on hover or touch */
-    .image-scroll-container:hover .image-scroll-track,
-    .image-scroll-container:active .image-scroll-track {
+    .image-scroll-container:hover .image-scroll-track {
       animation-play-state: paused;
     }
 
     @keyframes scrollImages {
-      0%   { transform: translateX(0); }
+      0% { transform: translateX(0); }
       100% { transform: translateX(-100%); }
     }
   </style>
@@ -121,116 +117,104 @@
 <body>
 
   <header>
-    <h1>Kerala Trip Plan – 14 to 19 August 2025</h1>
-    <p>From Ongole to Ernakulam – Sunrise, Chocolate, and Backwaters!</p>
+    <h1>South India Trip – 14 to 19 August 2025</h1>
+    <p>Coimbatore, Kodaikanal & Kerala Adventure 🌄🧘🌿</p>
   </header>
 
-  <!-- Scrolling Image Banner -->
+  <!-- Image Banner -->
   <div class="image-scroll-container">
     <div class="image-scroll-track">
-      <img src="alleppey.jpg" alt="Alleppey">
+      <img src="coimbatore.jpg" alt="Coimbatore">
+      <img src="kodaikanal.jpg" alt="Kodaikanal">
+      <img src="guna-caves.jpg" alt="Guna Caves">
+      <img src="isha.jpg" alt="Isha Foundation">
       <img src="munnar.jpg" alt="Munnar">
-      <img src="thekkady.jpg" alt="Thekkady">
-      <img src="kovalam.jpg" alt="Kovalam">
+      <img src="alleppey.jpg" alt="Alleppey">
       <img src="wayanad.jpg" alt="Wayanad">
     </div>
   </div>
 
-  <!-- Itinerary Section -->
   <section>
-
     <!-- Day 0 -->
     <div class="day-card">
-      <h2>📅 Day 0 – 14 Aug (Thu): Departure from Ongole</h2>
+      <h2>📅 Day 0 – 14 Aug (Thu): Ongole → Coimbatore</h2>
       <button class="toggle-btn" id="btn-day0" onclick="togglePlan('day0')">View Plan</button>
       <div class="plan-content" id="day0">
-        <p>🚆 Board train from <strong>Ongole</strong> at <span class="highlight">5:30 PM</span> to <strong>Ernakulam Junction</strong>.</p>
-        <p>🛏️ Overnight train journey.</p>
+        <p>🚌 Board overnight bus from <strong>Ongole</strong> to <strong>Coimbatore</strong></p>
+        <p>🛏️ Night journey</p>
       </div>
     </div>
 
     <!-- Day 1 -->
     <div class="day-card">
-      <h2>📅 Day 1 – 15 Aug (Fri): Arrival & Travel to Munnar</h2>
+      <h2>📅 Day 1 – 15 Aug (Fri): Coimbatore → Kodaikanal (Bike)</h2>
       <button class="toggle-btn" id="btn-day1" onclick="togglePlan('day1')">View Plan</button>
       <div class="plan-content" id="day1">
         <ul>
-          <li>🌄 Arrive at Ernakulam around 9:00–10:00 AM</li>
-          <li>🚗 Travel to <strong>Munnar</strong> (~4.5 hours)</li>
-          <li>🍫 Visit <strong>Homemade Chocolate Factory</strong></li>
-          <li>🛍️ Explore local tea, spices, and Munnar town</li>
-          <li>🛏️ Stay in Munnar</li>
+          <li>🏍️ Rent bike from Coimbatore</li>
+          <li>🌄 Ride to <strong>Kodaikanal</strong> (~4.5 hrs)</li>
+          <li>🍃 Evening visit to lakes or viewpoints</li>
+          <li>🛏️ Stay in Kodaikanal</li>
         </ul>
       </div>
     </div>
 
     <!-- Day 2 -->
     <div class="day-card">
-      <h2>📅 Day 2 – 16 Aug (Sat): Sunrise & Munnar Sightseeing</h2>
+      <h2>📅 Day 2 – 16 Aug (Sat): Guna Caves & Kodaikanal</h2>
       <button class="toggle-btn" id="btn-day2" onclick="togglePlan('day2')">View Plan</button>
       <div class="plan-content" id="day2">
         <ul>
-          <li>🌅 Early morning trip to <strong>Top Station</strong> for sunrise</li>
-          <li>🌿 Visit:
-            <ul>
-              <li>Mattupetty Dam</li>
-              <li>Echo Point</li>
-              <li>Tea Museum</li>
-              <li>Photo Point</li>
-            </ul>
-          </li>
-          <li>🛏️ Stay in Munnar</li>
+          <li>🌲 Explore <strong>Guna Caves</strong>, Pine Forest, Pillar Rocks</li>
+          <li>☕ Try local snacks, coffee & chocolate</li>
+          <li>🛏️ Stay in Kodaikanal</li>
         </ul>
       </div>
     </div>
 
     <!-- Day 3 -->
     <div class="day-card">
-      <h2>📅 Day 3 – 17 Aug (Sun): Munnar → Alleppey</h2>
+      <h2>📅 Day 3 – 17 Aug (Sun): Return to Coimbatore + Isha</h2>
       <button class="toggle-btn" id="btn-day3" onclick="togglePlan('day3')">View Plan</button>
       <div class="plan-content" id="day3">
         <ul>
-          <li>🚗 Travel to <strong>Alleppey</strong> (~5.5 hrs)</li>
-          <li>🚤 Check-in to <strong>Houseboat</strong> by 12:00 PM</li>
-          <li>🍛 Enjoy meals and scenic cruise on backwaters</li>
-          <li>🛏️ Overnight on houseboat or Alleppey hotel</li>
+          <li>🏍️ Ride back to <strong>Coimbatore</strong></li>
+          <li>🕉️ Visit <strong>Isha Yoga Center</strong> & Adiyogi Statue</li>
+          <li>🛏️ Stay in Coimbatore / Night travel to Kerala</li>
         </ul>
       </div>
     </div>
 
     <!-- Day 4 -->
     <div class="day-card">
-      <h2>📅 Day 4 – 18 Aug (Mon): Alleppey → Kochi</h2>
+      <h2>📅 Day 4 – 18 Aug (Mon): Munnar Exploration</h2>
       <button class="toggle-btn" id="btn-day4" onclick="togglePlan('day4')">View Plan</button>
       <div class="plan-content" id="day4">
         <ul>
-          <li>🚗 Travel to <strong>Kochi</strong> (~1.5 hrs)</li>
-          <li>🏝️ Visit:
-            <ul>
-              <li>Fort Kochi</li>
-              <li>Chinese Fishing Nets</li>
-              <li>Marine Drive</li>
-              <li>Jew Street & Palace</li>
-            </ul>
-          </li>
-          <li>🛏️ Stay near Ernakulam station</li>
+          <li>🚗 Travel to <strong>Munnar</strong></li>
+          <li>🍫 Visit <strong>Homemade Chocolate Factory</strong></li>
+          <li>🏞️ Explore Tea Gardens & Munnar Town</li>
+          <li>🛏️ Stay in Munnar</li>
         </ul>
       </div>
     </div>
 
     <!-- Day 5 -->
     <div class="day-card">
-      <h2>📅 Day 5 – 19 Aug (Tue): Return to Ongole</h2>
+      <h2>📅 Day 5 – 19 Aug (Tue): Mattupetty → Alleppey/Wayanad</h2>
       <button class="toggle-btn" id="btn-day5" onclick="togglePlan('day5')">View Plan</button>
       <div class="plan-content" id="day5">
-        <p>🚆 Board return train from <strong>Ernakulam Junction</strong> to <strong>Ongole</strong></p>
+        <ul>
+          <li>🏞️ Visit <strong>Mattupetty Dam</strong>, Echo Point, Photo Point</li>
+          <li>🚗 Continue to <strong>Alleppey</strong> or <strong>Wayanad</strong></li>
+          <li>🏠 Relaxing backwaters or hill retreat</li>
+        </ul>
       </div>
     </div>
-
   </section>
 
   <footer>
-    ❤️ Enjoy your Kerala journey filled with memories, chocolates & sunrise magic!
+    ✨ Ride, relax & explore: From bikes to backwaters – your 2025 adventure awaits!
   </footer>
 
   <script>
