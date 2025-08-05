@@ -9,7 +9,7 @@
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
-      background: linear-gradient(to right, #e0f7fa, #fce4ec);
+      background: #f7f9fc;
       color: #333;
     }
 
@@ -32,11 +32,11 @@
     }
 
     .day-card {
-      background: #ffffffd9;
+      background: white;
       margin-bottom: 1.5rem;
       padding: 1.5rem;
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
       border-left: 6px solid #2e8b57;
     }
 
@@ -83,12 +83,10 @@
     .image-scroll-container {
       overflow: hidden;
       white-space: nowrap;
-      background: linear-gradient(to right, #ffffff, #e3f2fd);
-      padding: 12px 0;
-      border-top: 3px solid #2e8b57;
-      border-bottom: 3px solid #2e8b57;
-      position: relative;
-      cursor: pointer;
+      background: #fff;
+      padding: 10px 0;
+      border-top: 2px solid #2e8b57;
+      border-bottom: 2px solid #2e8b57;
     }
 
     .image-scroll-track {
@@ -99,13 +97,19 @@
     }
 
     .image-scroll-track img {
-      width: 280px;
-      height: 180px;
-      margin: 0 12px;
+      width: 300px;
+      height: 200px;
+      margin: 0 15px;
       object-fit: cover;
-      border-radius: 14px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       vertical-align: middle;
+    }
+
+    /* Pause on hover or touch */
+    .image-scroll-container:hover .image-scroll-track,
+    .image-scroll-container:active .image-scroll-track {
+      animation-play-state: paused;
     }
 
     @keyframes scrollImages {
@@ -122,8 +126,8 @@
   </header>
 
   <!-- Scrolling Image Banner -->
-  <div class="image-scroll-container" id="scrollContainer">
-    <div class="image-scroll-track" id="scrollTrack">
+  <div class="image-scroll-container">
+    <div class="image-scroll-track">
       <img src="alleppey.jpg" alt="Alleppey">
       <img src="munnar.jpg" alt="Munnar">
       <img src="thekkady.jpg" alt="Thekkady">
@@ -135,9 +139,7 @@
   <!-- Itinerary Section -->
   <section>
 
-    <!-- Repeatable Days (same as your existing code) -->
-    <!-- Example for Day 0 shown below, others unchanged -->
-
+    <!-- Day 0 -->
     <div class="day-card">
       <h2>📅 Day 0 – 14 Aug (Thu): Departure from Ongole</h2>
       <button class="toggle-btn" id="btn-day0" onclick="togglePlan('day0')">View Plan</button>
@@ -147,7 +149,83 @@
       </div>
     </div>
 
-    <!-- (Continue the same way with Day 1, Day 2, etc...) -->
+    <!-- Day 1 -->
+    <div class="day-card">
+      <h2>📅 Day 1 – 15 Aug (Fri): Arrival & Travel to Munnar</h2>
+      <button class="toggle-btn" id="btn-day1" onclick="togglePlan('day1')">View Plan</button>
+      <div class="plan-content" id="day1">
+        <ul>
+          <li>🌄 Arrive at Ernakulam around 9:00–10:00 AM</li>
+          <li>🚗 Travel to <strong>Munnar</strong> (~4.5 hours)</li>
+          <li>🍫 Visit <strong>Homemade Chocolate Factory</strong></li>
+          <li>🛍️ Explore local tea, spices, and Munnar town</li>
+          <li>🛏️ Stay in Munnar</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Day 2 -->
+    <div class="day-card">
+      <h2>📅 Day 2 – 16 Aug (Sat): Sunrise & Munnar Sightseeing</h2>
+      <button class="toggle-btn" id="btn-day2" onclick="togglePlan('day2')">View Plan</button>
+      <div class="plan-content" id="day2">
+        <ul>
+          <li>🌅 Early morning trip to <strong>Top Station</strong> for sunrise</li>
+          <li>🌿 Visit:
+            <ul>
+              <li>Mattupetty Dam</li>
+              <li>Echo Point</li>
+              <li>Tea Museum</li>
+              <li>Photo Point</li>
+            </ul>
+          </li>
+          <li>🛏️ Stay in Munnar</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Day 3 -->
+    <div class="day-card">
+      <h2>📅 Day 3 – 17 Aug (Sun): Munnar → Alleppey</h2>
+      <button class="toggle-btn" id="btn-day3" onclick="togglePlan('day3')">View Plan</button>
+      <div class="plan-content" id="day3">
+        <ul>
+          <li>🚗 Travel to <strong>Alleppey</strong> (~5.5 hrs)</li>
+          <li>🚤 Check-in to <strong>Houseboat</strong> by 12:00 PM</li>
+          <li>🍛 Enjoy meals and scenic cruise on backwaters</li>
+          <li>🛏️ Overnight on houseboat or Alleppey hotel</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Day 4 -->
+    <div class="day-card">
+      <h2>📅 Day 4 – 18 Aug (Mon): Alleppey → Kochi</h2>
+      <button class="toggle-btn" id="btn-day4" onclick="togglePlan('day4')">View Plan</button>
+      <div class="plan-content" id="day4">
+        <ul>
+          <li>🚗 Travel to <strong>Kochi</strong> (~1.5 hrs)</li>
+          <li>🏝️ Visit:
+            <ul>
+              <li>Fort Kochi</li>
+              <li>Chinese Fishing Nets</li>
+              <li>Marine Drive</li>
+              <li>Jew Street & Palace</li>
+            </ul>
+          </li>
+          <li>🛏️ Stay near Ernakulam station</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Day 5 -->
+    <div class="day-card">
+      <h2>📅 Day 5 – 19 Aug (Tue): Return to Ongole</h2>
+      <button class="toggle-btn" id="btn-day5" onclick="togglePlan('day5')">View Plan</button>
+      <div class="plan-content" id="day5">
+        <p>🚆 Board return train from <strong>Ernakulam Junction</strong> to <strong>Ongole</strong></p>
+      </div>
+    </div>
 
   </section>
 
@@ -167,16 +245,6 @@
         btn.innerText = "View Plan";
       }
     }
-
-    // Pause/resume image scroll on click/touch
-    const scrollContainer = document.getElementById('scrollContainer');
-    const scrollTrack = document.getElementById('scrollTrack');
-    let isPaused = false;
-
-    scrollContainer.addEventListener('click', () => {
-      isPaused = !isPaused;
-      scrollTrack.style.animationPlayState = isPaused ? 'paused' : 'running';
-    });
   </script>
 
 </body>
